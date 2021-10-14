@@ -9,6 +9,8 @@ class Node:
 
 #Finds the path from root node to given root of the tree.
 def findLCA(root, n1, n2):
+    if (root is None or n1 is None or n2 is None):
+     return None
     path1 = []
     path2 = []
     if (not findPath(root, path1, n1) or not findPath(root, path2, n2)):
